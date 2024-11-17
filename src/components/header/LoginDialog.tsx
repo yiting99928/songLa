@@ -9,7 +9,6 @@ import {
 	DialogFooter,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -58,7 +57,7 @@ export default function LoginDialog({ isOpen, onClose }: LoginDialogProps) {
 				<div className="grid gap-4 py-4">
 					<div className="grid grid-cols-4 items-center gap-4">
 						<p>email</p>
-						<Input
+						<input
 							id="email"
 							placeholder="Email"
 							className="col-span-3"
@@ -70,7 +69,7 @@ export default function LoginDialog({ isOpen, onClose }: LoginDialogProps) {
 					</div>
 					<div className="grid grid-cols-4 items-center gap-4">
 						<p>password</p>
-						<Input
+						<input
 							id="password"
 							placeholder="Password"
 							className="col-span-3"

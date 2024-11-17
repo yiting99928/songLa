@@ -19,18 +19,15 @@ export const useAuthStore = create<AuthState>((set) => ({
     login: async (email, password) => {
     // 模擬登入的邏輯
       await new Promise(resolve => setTimeout(resolve, 1000))
-
-      const defaultUsername = '預設名'
-      const defaultUserImg = 'https://placehold.co/100x100/png'
-
+      console.log('password', password)
       // 模擬從 API 獲取的數據
-      const fetchedUsername = '我的名';
+      const fetchedUsername = 'myName';
       const fetchedUserImg = 'https://placehold.co/100x100/png';
 
       set({ isAuthenticated: true, user: {
         email,
-        username: fetchedUsername || defaultUsername,
-        userImg: fetchedUserImg || defaultUserImg,
+        username: fetchedUsername,
+        userImg: fetchedUserImg,
       },})
     },
     logout: () => set({ isAuthenticated: false, user: null }),

@@ -25,14 +25,7 @@ body {
     text-wrap: balance;
   }
 } */
-body {
-  * {
-    /* border: 1px solid #000; */
-  }
-  input {
-    border: 1px solid #000;
-  }
-}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -94,5 +87,8 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+  input {
+    border: 1px solid #000;
   }
 }
